@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.dao.Position_5064Dao">
+    <update id="update" parameterType="cn.itcast.domain.Position_5064">
+        update position_5064 set Jname=#{Jname},Dname=#{Dname} where Pno=#{Pno}
+    </update>
+
+    <select id="find" parameterType="String" resultType="cn.itcast.domain.Position_5064">
+        select * from position_5064 where Pno=#{Pno}
+    </select>
+
+    <insert id="insert" parameterType="cn.itcast.domain.Position_5064">
+        insert into position_5064 values (#{Pno},#{Jname},#{Dname})
+    </insert>
+</mapper>

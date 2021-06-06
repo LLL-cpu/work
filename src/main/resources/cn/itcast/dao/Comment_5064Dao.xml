@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.dao.Comment_5064Dao">
+    <select id="find" parameterType="String" resultType="String">
+        select Pcomment from comment_5064 where Pno=#{pno}
+    </select>
+
+    <update id="setComment" parameterType="cn.itcast.domain.Comment_5064">
+        update comment_5064 set Pcomment=#{Pcomment} where Pno=#{Pno}
+    </update>
+</mapper>

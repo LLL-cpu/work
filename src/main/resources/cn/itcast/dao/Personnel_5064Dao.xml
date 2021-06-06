@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.dao.Personnel_5064Dao">
+    <select id="find" parameterType="String" resultType="cn.itcast.domain.Personnel_5064">
+        select * from personnel_5064 where Pno=#{Pno}
+    </select>
+
+    <update id="update" parameterType="cn.itcast.domain.Personnel_5064">
+        update personnel_5064 set Pname=#{Pname},Page=#{Page},Psex=#{Psex},Pmoney=#{Pmoney} where Pno=#{Pno}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from personnel_5064 where Pno=#{Pno}
+    </delete>
+</mapper>

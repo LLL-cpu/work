@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.dao.User_pswd_5064Dao">
+    <select id="find" resultType="cn.itcast.domain.User_pswd_5064" parameterType="String">
+        select * from user_pswd_5064 where UUSER=#{username}
+    </select>
+
+    <insert id="regist" parameterType="cn.itcast.domain.User_pswd_5064">
+        insert into user_pswd_5064 values(#{UUSER},#{PSWD})
+    </insert>
+</mapper>

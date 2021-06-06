@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.dao.Personnel_infoDao">
+    <select id="findAll" resultType="cn.itcast.domain.Personnel_info">
+        select * from personnel_info
+    </select>
+
+    <select id="find" resultType="cn.itcast.domain.Personnel_info" parameterType="String">
+        select * from personnel_info where INFO_NO=#{NO}
+    </select>
+</mapper>
